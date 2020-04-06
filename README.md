@@ -31,3 +31,9 @@ get url		-> download a file to target from any website
 start path	->start program on target PC
 
 check		->check for administrator priviledges
+
+keylog_start	->Start keylogger on target PC
+
+keylog_dump	->Print keystrokes captured by keylogger
+
+q		->quit
